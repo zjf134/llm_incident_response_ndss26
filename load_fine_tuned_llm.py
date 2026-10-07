@@ -28,6 +28,9 @@ load_fine_tuned_llm.py —— 步骤 (S1)：加载微调好的事故响应 LLM
     国内网络建议先 export HF_ENDPOINT=https://hf-mirror.com。
 """
 
+import os
+os.environ.setdefault("HF_ENDPOINT", "https://hf-mirror.com")  # 服务器直连 huggingface.co 被墙，默认走国内镜像
+
 from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 import torch
 

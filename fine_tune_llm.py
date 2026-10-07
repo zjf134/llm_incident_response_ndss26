@@ -39,6 +39,7 @@ from transformers import (set_seed, AutoModelForCausalLM, AutoTokenizer,
                           BitsAndBytesConfig, Trainer, TrainingArguments,
                           PrinterCallback, ProgressCallback)
 from datasets import load_dataset
+import torch
 import torch.utils.data as tud
 
 if __name__ == '__main__':

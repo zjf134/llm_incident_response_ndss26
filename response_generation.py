@@ -28,6 +28,9 @@ response_generation.py —— 步骤 (S3)：用微调好的 LLM 生成事故响�
   - 无 GPU 时观看演示视频：https://www.youtube.com/watch?v=SCxq2ye-R4Y
 """
 
+import os
+os.environ.setdefault("HF_ENDPOINT", "https://hf-mirror.com")  # 服务器直连 huggingface.co 被墙，默认走国内镜像
+
 import random
 from datasets import load_dataset
 from transformers import AutoModelForCausalLM, AutoTokenizer, TextIteratorStreamer
